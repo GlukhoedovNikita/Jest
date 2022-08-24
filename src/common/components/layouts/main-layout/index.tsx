@@ -1,7 +1,9 @@
 import { FC } from 'react'
+import cn from 'classnames'
 
-import Header from '@common/components/containers/header'
-import { MainLayoutProps } from './interafces'
+import { MainLayoutProps } from './interfaces'
+
+import styles from './styles.module.scss'
 
 const MainLayout: FC<MainLayoutProps> = ({
     className,
@@ -9,11 +11,8 @@ const MainLayout: FC<MainLayoutProps> = ({
     ...props
 }) => {
     return (
-        <div className={className} {...props}>
-            <Header />
-            <div>
-                {children}
-            </div>
+        <div className={cn(className, styles.layout)} {...props}>
+            {children}
         </div>
     )
 }

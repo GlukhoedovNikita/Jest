@@ -1,0 +1,13 @@
+.layout {
+	display: grid;
+	grid-template-rows: auto 1fr;
+
+	width: 100vw;
+	height: 100vh;
+
+	.body {
+		display: grid;
+		align-content: center;
+		justify-content: center;
+	}
+}
