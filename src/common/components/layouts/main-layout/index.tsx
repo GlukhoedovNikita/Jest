@@ -11,7 +11,11 @@ const MainLayout: FC<MainLayoutProps> = ({
     ...props
 }) => {
     return (
-        <div className={cn(className, styles.layout)} {...props}>
+        <div
+            data-testid="main-layout"
+            className={cn(className, styles.layout)}
+            {...props}
+        >
             {children}
         </div>
     )

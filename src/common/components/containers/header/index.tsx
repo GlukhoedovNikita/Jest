@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 const Header: FC = () => {
     return (
         <header>
-            <Link to="/">Home</Link>
-            <Link to="/singup">Sing Up</Link>
-            <Link to="/singin">Sing In</Link>
+            <Link data-testid="home link" to="/">Home</Link>
+            <Link data-testid="singup-link" to="/singup">Sing Up</Link>
+            <Link data-testid="singin-link" to="/singin">Sing In</Link>
         </header>
     )
 }

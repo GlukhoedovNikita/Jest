@@ -12,7 +12,11 @@ const CenterLayout: FC<CenterLayoutProps> = ({
     ...props
 }) => {
     return (
-        <div className={cn(className, styles.layout)} {...props}>
+        <div
+            data-testid="center-layout"
+            className={cn(className, styles.layout)}
+            {...props}
+        >
             <Header />
             <div className={styles.body}>
                 {children}
