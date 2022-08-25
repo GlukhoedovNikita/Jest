@@ -2,8 +2,10 @@
 
 import { Config } from 'jest'
 
+const src = '<rootDir>/src'
+
 const config: Config = {
-    roots: ['<rootDir>/src'],
+    roots: [src],
     rootDir: '../.',
     collectCoverageFrom: [
         '<rootDir>/**/*.{js,jsx,ts,tsx}',
@@ -14,13 +16,13 @@ const config: Config = {
     },
     moduleNameMapper: {
         '\\.(css|less|scss|sss|styl)$': '<rootDir>/node_modules/jest-css-modules',
-        '@pages/(.*)': '<rootDir>/src/pages/$1',
-        '@common/(.*)': '<rootDir>/src/common/$1',
-        '@routes/(.*)': '<rootDir>/src/routes/$1',
-        '@store/(.*)': '<rootDir>/src/store/$1',
-        '@services/(.*)': '<rootDir>/src/services/$1',
-        '@assets/(.*)': '<rootDir>/src/assets/$1',
-        '@styles/(.*)': '<rootDir>/src/styles/$1'
+        '@pages/(.*)': `${src}/pages/$1`,
+        '@common/(.*)': `${src}/common/$1`,
+        '@routes/(.*)': `${src}/routes/$1`,
+        '@store/(.*)': `${src}/store/$1`,
+        '@services/(.*)': `${src}/services/$1`,
+        '@assets/(.*)': `${src}/assets/$1`,
+        '@styles/(.*)': `${src}/styles/$1`
     },
     testEnvironment: 'jsdom',
     passWithNoTests: true,
